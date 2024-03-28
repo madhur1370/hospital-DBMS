@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/doctor.css">
+    <script src="../script/doctor.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="title">medlife</div>
+        <div class="name">Welcome: </div>
+        <div class="logout">LOGOUT</div>
+        <div class="profile">profile</div>
+        <div class="editprofile">edit</div>
+    </nav>
+    <div class="main">
+        <div class="right">
+            <div class="todayappoint">today's appointment</div>
+            <div class="checked">patient checked</div>
+            <div class="patientdetails">patient details</div>
+            <div class="admit">Admitted patients</div>
+        </div>
+        <div class="left">
+            <div class="edituser hide">
+                <p>PROFILE</p>
+                <table>
+                    <tr>
+                        <td><label for="Name">full_name:</label></td>
+                        <td><input type="text" name="Name" id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">gender:</label></td>
+                        <td><input type="text" name="gender" id="gender"></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Age">age:</label></td>
+                        <td><input type="number" name="Age" id="Age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Phone">phone:</label></td>
+                        <td><input type="number" name="Phone" id="Phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">address:</label></td>
+                        <td><input type="text" name="address" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">email:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">password:</label></td>
+                        <td><input type="password" name="password" id="password"></td>
+                    </tr>
+                </table>
+                <button class="EDIT hide ">EDIT</button>
+            </div>
+            <div class="search hide">
+                <p>SEARCH PATIENT</p>
+                <table>
+                    <tr>
+                        <td><label for="pname">Patient_Name:</label></td>
+                        <td><input type="text" name="pname" id="pname" placeholder="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone_no.:</label></td>
+                        <td><input type="number" name="phone" id="phone" placeholder="enter phone number"></td>
+                    </tr>
+                </table>
+                <button class="sp">SEARCH</button>
+            </div>
+            <table class="table hide">
+            </table>
+        </div>
+    </div>
+</body>
+</html>

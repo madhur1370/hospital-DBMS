@@ -1,0 +1,196 @@
+nav{
+    height: 100px;
+    width: 100%;
+    background-color:cornflowerblue;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+*{
+    cursor:default;
+}
+.title{
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 15px black;
+    padding: 10px;
+}
+.name,.logout{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    align-self:flex-end;
+    color: white;
+}
+body{
+    caret-color: transparent;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 30vh;
+}
+.right{
+    margin-top: 10px;
+    width: calc( 20% - 20px );
+    height: calc( 97.7vh - 110px );
+    min-width: 160px;
+    background-color:dodgerblue;
+    display: flex;
+    flex-direction: column;
+}
+.a1,.a2,.a3,.a4{
+    height: 40px;
+    background-color: white;
+    margin: 10px;
+    font-size:125%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:3px solid rgb(4, 92, 97);
+    border-left: 3px solid rgb(3, 106, 154);
+    cursor: pointer;
+}
+
+.re{
+    border-top:0px solid rgb(4, 92, 97);
+    border-left: 0px solid rgb(3, 106, 154);
+}
+.main{
+    display: flex;
+}
+.left{
+    margin-left: 4px;
+    background-color: rgb(255, 255, 255);
+    height: calc( 97.7vh - 110px );
+    margin-top: 10px;
+    width: calc( 80% + 20px );
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+.addmed,.searchmed,.edituser{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+p{
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    text-decoration:solid underline black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+label{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+button{
+    height: 30px;
+    width: fit-content;
+    align-self: center;
+    margin-left: -px;
+    margin-top: 30px;
+    background-color: rgb(72, 72, 235);
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 0 0 2px black;
+    cursor: pointer;
+}
+
+.logout{
+    background-color: white;
+    color: cornflowerblue;
+    text-shadow: 1px 0 0px black;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.hide{
+    display:none;
+}
+
+table{
+    align-self: center;
+    width: 70%;
+}
+.table2{
+    width: 100%;
+}
+
+
+.displaydata{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.address,.contact{
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+}
+.address{
+    bottom: 30px;
+}
+
+
+
+
+
+.billprinting{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: scroll;
+}
+
+
+table{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.editprofile,.profile{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: cornflowerblue;
+    border-radius: 20px;
+    height: 25px;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-left: 5px;
+    width: 60px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.editprofile{
+    width: 40px;
+    top: 60px;
+}
+
+table{
+    margin: auto;
+}
+label{
+    font-weight: 600;
+}

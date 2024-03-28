@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <link rel="stylesheet" href="../styles/db.css">
+</head>
+
+<body>
+    <nav>
+        <div class="title">medlife</div>
+        <div class="name">Welcome: </div>
+        <div class="logout">LOGOUT</div>
+        <div class="profile">profile</div>
+        <div class="editprofile">edit</div>
+    </nav>
+
+    <div class="main">
+        <div class="rightpanel">
+            <div class="a1">add user</div>
+            <div class="a2">remove user</div>
+            <div class="a4">Add Rooms</div>
+            <div class="a5">update cabin</div>
+            <div class="a6">rooms</div>  
+        </div>
+        <div class="leftpanel">
+            <div class="edituser hide">
+                <p>PROFILE</p>
+                <table>
+                    <tr>
+                        <td><label for="Name">full_name:</label></td>
+                        <td><input type="text" name="Name" id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">gender:</label></td>
+                        <td><input type="text" name="gender" id="gender"></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Age">age:</label></td>
+                        <td><input type="number" name="Age" id="Age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Phone">phone:</label></td>
+                        <td><input type="number" name="Phone" id="Phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Address">address:</label></td>
+                        <td><input type="text" name="Address" id="Address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Email">email:</label></td>
+                        <td><input type="email" name="Email" id="Email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Password">password:</label></td>
+                        <td><input type="password" name="Password" id="Password"></td>
+                    </tr>
+                </table>
+                <button class="EDIT hide ">EDIT</button>
+            </div>
+            <div class="removeuser hide">
+                <p>REMOVE USER</p>
+                <table>
+                    <tr>
+                        <td><label for="userid">user_id:</label></td>
+                        <td><input type="text" name="userid" id="userid"></td>
+                    </tr>
+                </table>
+                <button class="remove">remove</button>
+            </div>
+            <div class="adduser hide">
+                <p>ADD USER</p>
+                <table>
+                    <tr>
+                        <tr>
+                            <td><label for="uid">user_id:</label></td>
+                            <td><input type="text" name="uid" id="uid" placeholder="like medlife****"></td>
+                        </tr>
+                        <td><label for="username">user_name:</label></td>
+                        <td><input type="text" name="username" id="username"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">full_name:</label></td>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sex">sex:</label></td>
+                        <td><select name="sex" id="sex">
+                                <option value="M">male</option>
+                                <option value="F">female</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">age:</label></td>
+                        <td><input type="number" name="age" id="age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">phone:</label></td>
+                        <td><input type="number" name="phone" id="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">address:</label></td>
+                        <td><input type="text" name="address" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">email:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="usertype">usertype:</label></td>
+                        <td><select name="usertype" id="usertype" required>
+                                <option value="receptionist">receptionist</option>
+                                <option value="dbuser">database admin</option>
+                                <option value="doctor">doctor</option>
+                                <option value="pharmacist">pharmacist</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">password:</label></td>
+                        <td><input type="password" name="password" id="password"></td>
+                    </tr>
+                </table>
+                <button class="add">ADD</button>
+            </div>
+            <div class="displaydata hide">
+                <p></p>
+                <table></table>
+            </div>
+            <div class="updatecabin hide">
+                <p>update room of doctor</p>
+                <table>
+                    <tr>
+                        <td><label for="doctorid">Doctor_id</label></td>
+                        <td><input type="text" name="doctorid" id="doctorid"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cabin">cabin_no:</label></td>
+                        <td><input type="number" name="cabin" id="cabin"></td>
+                    </tr>
+                </table>
+                <button class="cabin">update</button>
+            </div>
+            <div class="addrooms hide">
+                <p>ADD ROOM</p>
+                <table>
+                    <tr>
+                        <td><label for="roomno">room_no.:</label></td>
+                        <td><input type="number" name="roomno" id="roomno"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="roomtype">roomtype:</label></td>
+                        <td><select name="roomtype" id="roomtype">
+                                <option value="ICU">ICU</option>
+                                <option value="cabin">cabin</option>
+                                <option value="ward">ward</option>
+                                <option value="maternityward">maternity ward</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="beds">number of beds:</label></td>
+                        <td><input type="number" name="beds" id="beds" ></td>
+                    </tr>
+                </table>
+                <button class="addroom">Add Room</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../script/db.js"></script>
+
+</html>

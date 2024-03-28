@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receptionist</title>
+    <link rel="stylesheet" href="../styles/receptionist.css">
+    <script src="../script/receptionist.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="title">medlife</div>
+        <div class="name">Welcome: </div>
+        <div class="logout">LOGOUT</div>
+        <div class="profile">profile</div>
+        <div class="editprofile">edit</div>
+    </nav>
+
+
+
+    <div class="main">
+        <div class="rightpanel">
+            <div class="a2">Doctors</div>
+            <div class="a1">add patient</div>
+            <div class="a3">Search_patient</div>
+            <div class="a4">schedule appointment</div>
+            <div class="a5">admit patient</div>
+            <div class="a6">Available rooms</div>
+            <div class="a7">discharge patient</div>
+        </div>
+        <div class="leftpanel">
+
+            <div class="edituser hide">
+                <p>PROFILE</p>
+                <table>
+                    <tr>
+                        <td><label for="Name">full_name:</label></td>
+                        <td><input type="text" name="Name" id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">gender:</label></td>
+                        <td><input type="text" name="gender" id="gender"></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Age">age:</label></td>
+                        <td><input type="number" name="Age" id="Age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Phone">phone:</label></td>
+                        <td><input type="number" name="Phone" id="Phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">address:</label></td>
+                        <td><input type="text" name="address" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">email:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">password:</label></td>
+                        <td><input type="password" name="password" id="password"></td>
+                    </tr>
+                </table>
+                <button class="EDIT hide ">EDIT</button>
+            </div>
+
+            <div class="addpatient hide">
+                <p>ADD PATIENT</p>
+                <table>
+                    <tr>
+                        <td><label for="patientname">Patient_Name:</label></td>
+                        <td><input type="text" name="patientname" id="patientname" placeholder="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="patientage">age:</label></td>
+                        <td><input type="text" name="patientage" id="patientage" placeholder="age" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">gender:</label></td>
+                        <td><select name="gender" id="gender" required>
+                                <option value="M">male</option>
+                                <option value="F">female</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="patientno">Phone_no.:</label></td>
+                        <td><input type="num" name="patientno" id="patientno" placeholder="enter phone number" required>
+                        </td>
+                    </tr>
+                </table>
+                <button class="ap">ADD</button>
+            </div>
+
+
+
+            <div class="search hide">
+                <p>SEARCH PATIENT</p>
+                <table>
+                    <tr>
+                        <td><label for="pname">Patient_Name:</label></td>
+                        <td><input type="text" name="pname" id="pname" placeholder="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone_no.:</label></td>
+                        <td><input type="number" name="phone" id="phone" placeholder="enter phone number"></td>
+                    </tr>
+                </table>
+                <button class="sp">SEARCH</button>
+            </div>
+
+
+
+            <!-- admit the patient -->
+            <div class="admit hide">
+                <p>ADMIT PATIENT</p>
+                <table>
+                    <tr>
+                        <td><label for="name">Patient_Name:</label></td>
+                        <td><input type="text" name="name" id="name" placeholder="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">Phone_no.:</label></td>
+                        <td><input type="number" name="number" id="number" placeholder="enter phone number" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="roomtype">room_type:</label></td>
+                        <td><input type="text" name="roomtype" id="roomtype" placeholder="enter room type" required></td>
+                    </tr>
+                </table>
+                <button class="admitted">ADMIT</button>
+            </div>
+
+            <!-- discharge patient -->
+            <div class="discharge hide">
+                <p>Discharge Patient</p>
+                <table>
+                    <tr>
+                        <td><label for="patientid">Patient_ID:</label></td>
+                        <td><input type="text" name="patientid" id="patientid" placeholder=" patient ID" required></td>
+                    </tr>
+                </table>
+                <button class="discharged">Discharge</button>
+            </div>
+
+            <!-- display data in table -->
+            <div class="displaydata hide">
+                <p></p>
+                <table class=".table">
+                </table>
+            </div>
+            <!-- appointment -->
+            <div class="appointment hide">
+                <p>Schedule Appointment</p>
+                <table class="table">
+                <tr>
+                    <td><label for="did">Doctor_id</label></td>
+                    <td><input type="text" name="did" id="did" placeholder="doctor's id" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phonenum">Phone_no.:</label></td>
+                    <td><input type="number" name="phonenum" id="phonenum" placeholder="enter phone number"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Appointment_Date:</label></td>
+                    <td><input type="date" name="date" id="date" placeholder="date" required></td>
+                </tr>
+                </table>
+                <button class="appoint">schedule</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

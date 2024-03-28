@@ -1,0 +1,173 @@
+nav{
+    height: 100px;
+    width: 100%;
+    background-color:cornflowerblue;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+*{
+    cursor:default;
+}
+.title{
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 15px black;
+    padding: 10px;
+}
+.name,.logout,.profile,.editprofile{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    align-self:flex-end;
+    color: white;
+}
+body{
+    caret-color: transparent;
+    height: 100%;
+    background-image: url("../favicon.ico");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 30vh;
+}
+.rightpanel{
+    margin-top: 10px;
+    width: calc( 20% - 20px );
+    height: calc( 97.7vh - 110px );
+    min-width: 160px;
+    background-color:dodgerblue;
+    display: flex;
+    flex-direction: column;
+}
+.a1,.a2,.a3,.a4,.a5,.a6,.a7{
+    height: 40px;
+    background-color: white;
+    margin: 10px;
+    font-size:125%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:3px solid rgb(4, 92, 97);
+    border-left: 3px solid rgb(3, 106, 154);
+}
+.a1:hover,.a2:hover,.a3:hover,.a4:hover,.a5:hover,.a6:hover,.a7:hover{
+    cursor: pointer;
+}
+.re{
+    border-top:0px solid rgb(4, 92, 97);
+    border-left: 0px solid rgb(3, 106, 154);
+}
+.main{
+    display: flex;
+}
+.leftpanel{
+    background-color: rgb(255, 255, 255);
+    height: calc( 97.7vh - 110px );
+    margin-top: 10px;
+    width: calc( 80% + 20px );
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+.addpatient,.search,.admit,.discharge,.edituser{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+p{
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    text-decoration:solid underline black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+label{
+    font-weight: bolder;
+    font-size: 20px;
+}
+td{
+    padding: 8px;
+}
+button{
+    height: 30px;
+    width: fit-content;
+    align-self: center;
+    margin-left: -80px;
+    margin-top: 30px;
+    background-color: rgb(72, 72, 235);
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+button:hover{
+    cursor: pointer;
+}
+input,select{
+    padding: 5px;
+}
+.logout{
+    background-color: white;
+    color: cornflowerblue;
+    text-shadow: 1px 0 0px black;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.displaydata{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hide{
+    display:none;
+}
+
+.tr:nth-child(odd){
+    background-color: rgb(214, 219, 219);
+}
+
+.a4,.a5,.a6,.a7{
+    text-align: center;
+    height: 50px;
+}
+.table{
+    margin: auto;
+}
+.appoint{
+    margin-left: 40%;
+}
+
+.editprofile,.profile{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: cornflowerblue;
+    border-radius: 20px;
+    height: 15px;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.editprofile{
+    top: 60px;
+}
+table{
+    margin: auto;
+}
+
+

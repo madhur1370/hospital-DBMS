@@ -1,0 +1,82 @@
+*{
+    caret-color: transparent;
+}
+body{
+    background-color:white;
+    display: flexbox;
+    text-align: center;
+}
+.title{
+    font-size: 15vh;
+    color: rgb(255, 29, 29);
+    font-weight: bolder;
+    font-style: italic;
+}
+.login{
+    font-size: 6vh;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+.form{
+    background-color:cornflowerblue;
+    width: 100%;
+    height: calc( 100% - 15vh);
+    max-width: 500px;
+    flex-direction: column;
+    font-size:large;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 3px black;
+    margin:auto;
+}
+.logbt{
+    width: 80px;
+    align-self: center;
+    margin: 50px;
+}
+label{
+    padding: 10px;
+}
+.message{
+    height: 40px;
+    position: absolute;
+    width: 150px;
+    background-color: rgb(255, 0, 51);
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    left: 40%;
+}
+input{
+    margin: 50px;
+    height: 20px;
+}
+.radio,#receptionist,#doctor,#pharmacist,#dbuser{
+    margin: 0px;
+    padding: 0px;
+}
+.radio{
+    height: fit-content;
+    display:flex;
+    width: 150px;
+    margin-left: 65px;
+}
+select{
+    margin-left: 62px;
+}
+.box{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+.logbt{
+    height: 45px;
+    font-size: x-large;
+    width: 90px;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 255);
+    color: forestgreen;
+    border-radius: 25px;
+}
+.hide{
+    display: none;
+}

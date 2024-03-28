@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacist</title>
+    <link rel="stylesheet" href="../styles/pharmacist.css">
+</head>
+
+<body>
+    <nav>
+        <div class="title">medlife</div>
+        <div class="name">Welcome: </div>
+        <div class="logout">LOGOUT</div>
+        <div class="profile">profile</div>
+        <div class="editprofile">edit</div>
+    </nav>
+    <div class="main">
+        <div class="right">
+            <div class="a1">Add Medicine</div>
+            <div class="a2">Available<br>Medicines</div>
+            <div class="a3">Generate Bill</div>
+            <div class="a4">Search<br>Medicine</div>
+        </div>
+        <div class="left">
+
+            <div class="edituser hide">
+                <p>PROFILE</p>
+                <table>
+                    <tr>
+                        <td><label for="Name">full_name:</label></td>
+                        <td><input type="text" name="Name" id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">gender:</label></td>
+                        <td><input type="text" name="gender" id="gender"></select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Age">age:</label></td>
+                        <td><input type="number" name="Age" id="Age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Phone">phone:</label></td>
+                        <td><input type="number" name="Phone" id="Phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">address:</label></td>
+                        <td><input type="text" name="address" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">email:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">password:</label></td>
+                        <td><input type="password" name="password" id="password"></td>
+                    </tr>
+                </table>
+                <button class="EDIT hide ">EDIT</button>
+            </div>
+            <div class="displaydata">
+                <p class="head"></p>
+                <table class="table"></table>
+            </div>
+            <div class="addmed hide">
+                <p>ADD MEDICINE</p>
+                <table>
+                    <tr>
+                        <td><label for="medname">Medicine_Name.:</label></td>
+                        <td><input type="text" for="medname" name="medname" id="medname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="quantity">Quantity.:</label></td>
+                        <td><input type="text" for="quantity" name="quantity" id="quantity" required></td>
+                    </tr>
+                </table>
+                <button class="am">ADD</button>
+            </div>
+
+            <div class="searchmed hide">
+                <p>SEARCH MEDICINE</p>
+                <table>
+                    <tr>
+                        <td><label for="name">Medicine_Name.:</label></td>
+                        <td><input type="text" for="name" name="name" id="name" required></td>
+                    </tr>
+                </table>
+                <button class="search">SEARCH</button>
+            </div>
+            <div class="billing hide">
+                <p class="b1">MEDLIFE</p>
+                <div class="l">
+                    <div class="edituser hide">
+                        <p>PROFILE</p>
+                        <table>
+                            <tr>
+                                <td><label for="Name">full_name:</label></td>
+                                <td><input type="text" name="Name" id="Name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="gender">gender:</label></td>
+                                <td><input type="text" name="gender" id="gender"></select></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Age">age:</label></td>
+                                <td><input type="number" name="Age" id="Age"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Phone">phone:</label></td>
+                                <td><input type="number" name="Phone" id="Phone"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="address">address:</label></td>
+                                <td><input type="text" name="address" id="address"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">email:</label></td>
+                                <td><input type="email" name="email" id="email"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="password">password:</label></td>
+                                <td><input type="password" name="password" id="password"></td>
+                            </tr>
+                        </table>
+                        <button class="EDIT hide ">EDIT</button>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <td><label for="b3" class="b3">Patient_Name</label></td>
+                            <td><input type="text" name="b3" id="b3"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="b2" class="b2">Patient_id</label></td>
+                            <td><input type="text" name="b2" id="b2"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="r">
+                    <table>
+                        <tr>
+                            <td><label for="b5" class="b5">Doctor_Name</label></td>
+                            <td><input type="text" name="b5" id="b5"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="b6" class="b6">Pharmacist_Name</label></td>
+                            <td><input type="text" name="b6" id="b6"></td>
+                        </tr>
+                    </table>
+                </div>
+                <table class="table2">
+                    <tr>
+                        <td>sr_no.</td>
+                        <td>Medicine Name</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </tr>
+                </table>
+                <table class="addmed">
+                    <tr>
+                        <td><label for="mname" class="l1">medicine_name</label></td>
+                        <td><input type="text" name="mname" id="mname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="items" class="l1">quantity</label></td>
+                        <td><input type="text" name="items" id="items"></td>
+                    </tr>
+                </table>
+                <button class="addd">ADD MED</button>
+                <button class="print">PRINT</button>
+                <div class="address">Address: 2/1254,kursi road,near akansha coloney,lucknow</div>
+                <div class="contact">CONTACT: 255547861,8745963210,12489555</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../script/pharmacist.js"></script>
+
+</html>

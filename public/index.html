@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedLife</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <div class="message">INCORRECT DETAILS</div>
+    <div class="title">Medlife</div>
+    <img src="" alt="">
+    <div class="login">LOGIN</div>
+    <div class="box">
+        <div class="form">
+            <div class="username">
+                <label for="username">username:</label>
+                <input type="text" name="username" id="username" required maxlength="15">
+            </div>
+            <div class="radio">
+                <label for="usertype">usertype:</label>
+                    <select name="usertype" id="usertype" required >
+                        <option value="receptionist">receptionist</option>
+                        <option value="dbuser">database admin</option>
+                        <option value="doctor">doctor</option>
+                        <option value="pharmacist">pharmacist</option>
+                    </select>
+            </div>
+            <div class="password">
+                <label for="password">password:</label>
+                <input type="text" name="password" id="password" required max="15">
+            </div>
+            <button class="logbt">login</button>
+        </div>
+    </div>
+</body>
+<script>
+    window.addEventListener('load',()=>{
+        const mess=document.querySelector('.message');
+        mess.classList.add('hide');
+        const a=document.getElementById('username');
+        const b=document.getElementById('usertype');
+        const c=document.getElementById('password');
+        const s=document.querySelector('.logbt');
+        a.addEventListener('click',()=>{
+            mess.classList.add('hide');
+        });
+        b.addEventListener('click',()=>{
+            mess.classList.add('hide');
+        });
+        c.addEventListener('click',()=>{
+            mess.classList.add('hide');
+        });
+        s.addEventListener('click',()=>{
+            const options={
+                method: 'POST',
+                headers: {'content-type':'application/json'},
+                body: JSON.stringify({
+                    username: a.value,
+                    usertype: b.value,
+                    password: c.value
+                })
+            };
+            fetch('/login',options)
+            .then(res => res.json())
+            .then(data=>{
+                if(data.key==='incorrect')
+                {
+                    mess.classList.remove('hide');
+                }
+                else
+                {
+                    sessionStorage.name=a.value;
+                    sessionStorage.usertype=b.value;
+                    sessionStorage.id=data.id;
+                    var que=`?usertype=${b.value}`;
+                    window.location.href="/user"+que;
+                }
+            })
+    });
+    });
+</script>
+</html>
