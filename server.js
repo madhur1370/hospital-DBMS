@@ -385,12 +385,41 @@ app.post('/addmedbill',(req,res)=>{
 
 //add user
 app.post('/adduser',(req,res)=>{
-    req.body.phoneno=Number(req.body.phoneno);
-    req.body.age=Number(req.body.age);
-    db.query('insert into usertype set ?',req.body,(err,result)=>{
-        console.log(err)
+    var body=req.body;
+    body.phoneno=Number(body.phoneno);
+    body.age=Number(body.age);
+    var t=body.speciality;
+    delete body.speciality;
+    db.query('insert into usertype set ?',body,(err,result)=>{
         if(!err)
         {
+            if(body.usertype=='doctor')
+            {
+                db.query(`select a.roomno as roomno from (select roomno from room where roomtype='cabin' and available_beds>0) as a where a.roomno not in (select  cabinno from doctor) limit 1`,(e1,r1)=>{
+                
+                    if(r1.length==1)
+                    {
+
+                        db.query(`insert into doctor values('${body.id}',${Number(r1[0].roomno)},'${t}')`,(e2,r2)=>{
+                            
+                            if(!e2)
+                            {
+                                res.end(JSON.stringify({key:"user is successfully added"}));
+                                db.query(`update room set available_beds=0 where roomno=${Number(r1[0].roomno)}`,(e3,r3)=>{
+                                    
+                                });
+                            }
+                            
+                        });
+                    }
+                    else
+                    {
+                        res.end(JSON.stringify({key:"cabin not available for doctor"}));
+                    }
+                    
+                });
+            }
+            else
             res.end(JSON.stringify({key:"user is successfully added"}));
         }
         else
@@ -403,16 +432,17 @@ app.post('/adduser',(req,res)=>{
 app.post('/removeuser',(req,res)=>{
     if(req.body.userid==='0')
     res.end(JSON.stringify({key:'cannot delete root'}));
-    db.query(`delete from usertype where id='${req.body.userid}'`,(err,result)=>{
-        if(!err)
-        {
-            db.query(`delete from doctor where docid='${req.body.userid}'`,(e1,r1)=>{
-                res.end(JSON.stringify({key:'user removed'}));
-            });
-        }
-        else
-        res.end(JSON.stringify({key:'user id not exist'}));
-    }); 
+
+    db.query(`update room set available_beds=1 where roomno in (select cabinno from doctor where docid='${req.body.userid}')`,(e1,r1)=>{
+        db.query(`delete from usertype where id='${req.body.userid}'`,(err,result)=>{
+            if(!err)
+            {
+                res.end(JSON.stringify({key:'removed'}));
+            }
+            else
+            res.end(JSON.stringify({key:'user id not exist'}));
+        }); 
+    });
 });
 
 
