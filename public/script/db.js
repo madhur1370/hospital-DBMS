@@ -253,6 +253,7 @@ window.addEventListener('load', () => {
             var password = document.querySelector('#password');
             var address = document.querySelector('#address')
             var email = document.querySelector('#email');
+            var speciality=document.querySelector('#speciality');
             var content = {
                 id: id.value,
                 username: username.value,
@@ -263,7 +264,8 @@ window.addEventListener('load', () => {
                 email: email.value,
                 usertype: usertype.value,
                 phoneno: phone.value,
-                password: password.value
+                password: password.value,
+                speciality: speciality.value
             };
             var object = {
                 method: 'POST',
@@ -278,6 +280,17 @@ window.addEventListener('load', () => {
         });
 
 
+
+        var dd=document.querySelector('.speciality');
+        var select=document.querySelector('#usertype');
+        select.addEventListener('change',(e)=>{
+            
+            if(e.target.value=='doctor')
+            dd.classList.remove('hide');
+            else
+            dd.classList.add('hide');
+
+        });
 
         //add rooms from database
         addroom.addEventListener('click', () => {

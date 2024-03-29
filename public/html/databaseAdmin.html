@@ -74,10 +74,10 @@
                 <p>ADD USER</p>
                 <table>
                     <tr>
-                        <tr>
-                            <td><label for="uid">user_id:</label></td>
-                            <td><input type="text" name="uid" id="uid" placeholder="like medlife****"></td>
-                        </tr>
+                        <td><label for="uid">user_id:</label></td>
+                        <td><input type="text" name="uid" id="uid" placeholder="like medlife****"></td>
+                    </tr>
+                    <tr>
                         <td><label for="username">user_name:</label></td>
                         <td><input type="text" name="username" id="username"></td>
                     </tr>
@@ -113,10 +113,14 @@
                         <td><select name="usertype" id="usertype" required>
                                 <option value="receptionist">receptionist</option>
                                 <option value="dbuser">database admin</option>
-                                <option value="doctor">doctor</option>
+                                <option value="doctor" >doctor</option>
                                 <option value="pharmacist">pharmacist</option>
                             </select>
                         </td>
+                    </tr>
+                    <tr class="speciality hide">
+                        <td><label for="speciality">speciality:</label></td>
+                        <td><input type="text" name="speciality" id="speciality"></td>
                     </tr>
                     <tr>
                         <td><label for="password">password:</label></td>
